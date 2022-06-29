@@ -1,17 +1,12 @@
 // // fetch mane hocce kichu tule niya asa
 
 
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
-//     .then(response => response.json())
-//     .then(json => console.log(json))
-
-// load data
 
 function loadData() {
 
     fetch('https://jsonplaceholder.typicode.com/todos/1')
         .then(response => response.json())
-        .then(json => console.log(json))
+        .then(data => console.log(data))
 
 
 }
@@ -22,7 +17,7 @@ function loadUsers() {
 
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
-        .then(json => displayUsers(json))
+        .then(data => displayUsers(data))
 }
 
 
@@ -39,7 +34,11 @@ function postUsers() {
 
 
 function displayUsers(data) {
-
-    console.log(data);
+    const ul = document.getElementById('users');
+    for (const user of data) {
+        const li = document.createElement('li');
+        li.innerText = `Name: ${user.name} email: ${user.email}`;
+        ul.appendChild(li);
+    }
 
 }
