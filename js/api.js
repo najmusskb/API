@@ -29,9 +29,7 @@ function postUsers() {
         .then(data => console.log(data))
 }
 
-
 // automatic call --------------  postUsers()
-
 
 function displayUsers(data) {
     const ul = document.getElementById('users');
