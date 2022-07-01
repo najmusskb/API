@@ -22,6 +22,7 @@ function loadUsers() {
 
 
 
+
 function postUsers() {
 
     fetch('https://jsonplaceholder.typicode.com/posts')
