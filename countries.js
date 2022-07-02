@@ -3,7 +3,7 @@
 const loadCountries = () => {
 
 
-    fetch('https://restcountries.com/v3.1/all')
+    fetch('https://restcountries.eu/v2/all')
         .then(res => res.json())
         .then(data => displayCountries(data));
 }
